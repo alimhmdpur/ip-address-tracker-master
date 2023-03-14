@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assests/css/style.css" />
+    <title>IP Address Tracker</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style> -->
+  </head>
+  <body>
+    <div class="bg-body">
+      <div class="container-body">
+        <header class="address-input-section">
+          <h2 class="web-title">IP Address Tracker</h2>
+          <form class="ip-form" id="ipform">
+            <input
+              class="ip-input"
+              id="ipInput"
+              type="text"
+              name=""
+              placeholder="Serch for any IP address or domain"
+            />
+            <button class="input-btn" type="submit" id="btn">
+              <img src="./assests/images/icon-arrow.svg" alt="arrow-icon" />
+            </button>
+          </form>
+        </header>
+        <section class="data-list-section">
+          <div class="row justify-content-center align-items-center p-4">
+            <div class="data-section col-12 col-sm-6 col-lg-3">
+              <h3 class="title-data">ip address</h3>
+              <span class="data-ip" id="ipAddress"></span>
+            </div>
+            <div class="data-section col-12 col-sm-6 col-lg-3">
+              <h3 class="title-data">location</h3>
+              <span class="data-ip" id="location"></span>
+            </div>
+            <div class="data-section col-12 col-sm-6 col-lg-3">
+              <h3 class="title-data">timezone</h3>
+              <span class="data-ip" id="timezone"></span>
+            </div>
+            <div class="data-section col-12 col-sm-6 col-lg-3">
+              <h3 class="title-data">isp</h3>
+              <span class="data-ip" id="isp"></span>
+            </div>
+          </div>
+          <div id="map"></div>
+        </section>
+      </div>
+    </div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="./assests/js/app.js"></script>
+  </body>
+</html>
+<!-- IP Address Tracker
+  
+  Search for any IP address or domain
+  
+  IP Address
+  Location
+  Timezone
+  UTC add offset value dynamically using the API 
+ISP
+
+<div class="attribution">
+  Challenge by
+  <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+    >Frontend Mentor</a
+  >. Coded by <a href="#">Your Name Here</a>.
+</div> -->
